@@ -1,0 +1,49 @@
+/*Main App Header class CSS*/
+.app-header{
+  display: grid;
+  background: #00be6e;
+  grid-template-columns: 0.25fr 4.8fr;
+  grid-auto-rows: 3em;
+  align-items: center;
+  padding-left: 1em;
+  color:#ffffff;
+  font-size: 24px;
+  font-family: Roboto-Bold;
+}
+
+/*app-container CSS for play area*/
+.app-container{
+  border: 1px solid #f2f2f2;
+  display: grid;
+  grid-auto-rows: auto;
+  margin: 1em 5em;
+}
+
+/*play-icon css for header*/
+.play-icon {
+  cursor: pointer;
+  font-size: 2em;
+}
+
+/*app-container for Iphone,Ipad and all devices with width from 320px to 780px*/
+@media (min-width: 320px) and (max-width: 780px){
+  .app-container{
+    margin: 0;
+  }
+}
+
+/*Main App Footer class CSS*/
+.app-footer{
+  background: #f5f2f2;
+  display: grid;
+  font-size: 12px;
+  grid-template-columns: 100%;
+  line-height: 1.5em;
+  align-items: center;
+  padding: 1em;
+}
+
+.footer-info{
+  font-family: Roboto-Bold;
+  font-size: 14px;
+}

@@ -1,0 +1,46 @@
+<button class="action-button add-video-button" [disabled]="showAddVideoForm" (click)="showAddVideoForm=!showAddVideoForm">Add Video to Playlist</button>
+
+  <div  class='add-form-container' *ngIf="showAddVideoForm">
+  <form class='form-container form-box' [formGroup]="addVideoForm" >
+    <div [ngClass]="{'error':addVideoForm.controls['videoTitle'].invalid}">
+    <label #inputTitleLabel for="videoTitle" id="videoTitleLabel">Video Title</label>
+    <input type='text' id='videoTitle' formControlName="videoTitle" placeholder="Add video title" (focus)="inputFocused = true"
+           (blur)="inputFocused = false"/>
+    <span class='error' *ngIf="addVideoForm.controls['videoTitle'].invalid">Field is mandatory</span>
+    </div>
+    <div [ngClass]="{'error':addVideoForm.controls['videoArtist'].invalid}">
+
+      <label #inputArtistLabel for="videoArtist" id="videoArtistLabel">Video Artist</label>
+      <input type='text' id='videoArtist' formControlName="videoArtist" placeholder="Add video Artist"/>
+
+      <span  class='error' *ngIf="addVideoForm.controls['videoArtist'].invalid">Field is Mandatory</span>
+    </div>
+
+    <div [ngClass]="{'error':addVideoForm.controls['videoUrl'].invalid}">
+
+      <label #inputUrlLabel for="videoURL" id="videoURLLabel">Video URL</label>
+      <input type='text' id='videoURL' formControlName="videoUrl" placeholder="Add video URL"/>
+
+      <span  class='error' *ngIf="addVideoForm.controls['videoUrl'].invalid">Field is mandatory</span>
+    </div>
+
+    <div [ngClass]="{'error':addVideoForm.controls['playlist'].invalid}">
+
+      <label #inputUrlLabel for="videoPlaylist" id="videoPlaylistLabel">Playlist</label>
+      <select id='video-to-playlist' type='text' id='videoPlaylist' formControlName="playlist" placeholder="Add video To Playlist">
+        <option [disabled]="true" >Add Video to Playlist</option>
+        <option *ngFor="let list of playlist">
+          {{list.name}}
+        </option>
+      </select>
+
+      <span  class='error' *ngIf="addVideoForm.controls['playlist'].invalid">Field is mandatory</span>
+    </div>
+    <button class="action-button submit-video-button" (click)="addvideoToLibrary()" [disabled]="addVideoForm.invalid">Submit</button>
+    <button class="action-button close-button" (click)="resetForm();showAddVideoForm=!showAddVideoForm;">Close</button>
+
+  </form>
+  </div>
+
+
+

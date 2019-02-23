@@ -1,0 +1,141 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("assets/fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+body{
+  font-family: Roboto-Regular;
+  margin: 0;
+  font-size: 16px;
+}
+
+/*Main video-player container CSS*/
+.video-container{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: auto;
+  margin: 1em;
+}
+
+/*Button Design CSS throughout app*/
+.action-button {
+background-color:#00be6e;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Roboto-Bold;
+  padding:0.5em;
+}
+.action-button:hover {
+  background-color:#FFF;
+  color:#00be6e;
+  border: 1px solid #00be6e;
+}
+.action-button:active {
+  position:relative;
+  top:1px;
+}
+
+/*Select design CSS throughout app*/
+select {
+  margin-bottom: 1em;
+  padding: .25em;
+  border: 0;
+  border-bottom: 2px solid currentcolor;
+  font-weight: bold;
+  letter-spacing: .15em;
+  border-radius: 0;
+}
+select:focus,select:active {
+outline: 0;
+border-bottom-color: #00be6e;
+}
+
+/*Main Video tag CSS*/
+video{
+  width: 100%;
+  height: auto;
+}
+.video-playlist-container{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+/*Css for Low resolution devices like Iphone,Ipad*/
+@media (min-width: 320px) and (max-width: 780px){
+  .video-container{
+    grid-template-columns: 4fr;
+  }
+  .video-playlist-container{
+    grid-template-columns: 100%;
+  }
+}
+/*Input box design CSS throughout application*/
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*Client Side Error CSS*/
+.error{
+  color:red;
+}
+.error input[type=text] , .error input[type=text]:focus {
+  border: 1px solid red;
+}
+
+/*Forms Design CSS throughout app*/
+.form-container{
+  display: grid;
+  grid-template-columns: 45% 45%;
+  margin: 1em;
+  grid-gap: 1em;
+}
+.form-box{
+  -webkit-box-shadow: 0px 1px 14px 2px #ccc;
+  -moz-box-shadow: 0px 1px 14px 2px #ccc;
+  box-shadow: 0px 1px 14px 2px #ccc;
+  padding: 1em ;
+  border-radius: 4px;
+}
+.form-container select{
+  padding: 12px 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+/*Form close button CSS*/
+.close-button{
+  background:red;
+}
+.close-button:hover{
+  background: #FFF;
+  border: 1px solid red;
+  color: red;
+}
+.add-form-container{
+  margin-top: 2em;
+  box-shadow: #f2f2f2;
+}
+
+/*Button on Disable CSS*/
+.action-button:disabled{
+  background:  linear-gradient(to bottom,#dedede 50%, #00be6e 100%);
+  pointer-events: none;
+}
+

@@ -1,0 +1,23 @@
+<div class="playlist-container">
+  <header class="playlist-header">Feel & Play !!!</header>
+<div class="video-playlist-container">
+  <select #playListSelect>
+  <option [disabled]="true">Choose Playlist</option>
+    <option class="playlist-name" *ngFor="let list of playlist">{{list.name}}</option>
+  </select>
+</div>
+<app-create-playlist  (addPlaylist)="addNewPlaylist($event)"></app-create-playlist>
+<app-add-video></app-add-video>
+<div class="video-container">
+  <ul class="playlist" *ngFor="let list of choosenPlaylist"><span class="playlist-header">{{list.name}}</span>
+
+    <div class="playlist-scrollable"><li class="video-from-playlist" *ngFor="let video of list.videos" (click)="playVideoFromPlaylist(video)">
+      <i class="fas fa-play"></i>
+      {{video.title}}
+      <sub>Artist: {{video.artist}}</sub>
+    </li>
+    </div>
+  </ul>
+</div>
+</div>
+

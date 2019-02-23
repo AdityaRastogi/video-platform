@@ -1,0 +1,19 @@
+<div class="video-playlist-container">
+  <div class="video-container">
+    <video #videoPlayer controls controlsList="nodownload" crossorigin="anonymous" preload="metadata">
+      <source [src]="videoUrl" type="video/mp4">
+    </video>
+    <div class="video-details-container">
+      <span class="video-details-heading">Title:</span>
+      <span class="video-details-value">{{videoTitle}}</span>
+      <span class="video-details-heading">Artist:</span>
+      <span class="video-details-value">{{videoArtist}}</span>
+    </div>
+  </div>
+  <app-playlist (playThisPlaylist)="playSelectedPlaylist($event)" (playSelectedVideo)="playSelectedVideoFromPlaylist($event)"></app-playlist>
+</div>
+
+
+
+
+

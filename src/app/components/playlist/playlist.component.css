@@ -1,0 +1,33 @@
+.playlist-container{
+  margin: 1em 1em;
+}
+.video-container{
+  margin: 0;
+}
+.playlist{
+  list-style: none;
+  padding: 0 ;
+}
+.playlist[_ngcontent-c2] li[_ngcontent-c2] {
+  display: grid;
+  grid-template-columns: 0.4fr 3fr 2fr;
+  grid-template-rows: 2.5em;
+  align-items: center;
+  padding-left: 1em;
+  margin-bottom: 0.3em;
+  border-radius: 12px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-bottom: 1.5px solid #ccc;
+  background: linear-gradient(to bottom,#ccc 11%,#ccc 2% , #00be6e 109%);
+}
+
+.playlist-header{
+  font-family: Roboto-Bold;
+  font-size: 32px;
+}
+
+.playlist-scrollable{
+  max-height:20em;
+  overflow: auto;
+}

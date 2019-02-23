@@ -1,0 +1,30 @@
+<button id='create-playlist-button' class="action-button" [disabled]="showPlaylistForm"  (click)="showPlaylistForm = !showPlaylistForm">Create Playlist</button>
+
+<div class='add-form-container' *ngIf="showPlaylistForm">
+  <form class="form-container form-box" [formGroup]="playlistForm">
+    <div [ngClass]="{'error':playlistForm.controls['playListName'].invalid}">
+      <label #inputPlaylistNameLabel for="playListName" id="playListNameLabel">Playlist Name</label>
+      <input type='text' id='playListName' formControlName="playListName" placeholder="Add playList Name"/>
+      <span class='error' *ngIf="playlistForm.controls['playListName'].invalid">Field is mandatory</span>
+    </div>
+    <div  [ngClass]="{'error':playlistForm.controls['videos'].invalid}">
+
+      <label #inputVideosLabel for="videosToPlaylist" id="videosLabel">Videos to Playlist</label>
+      <ul class='videos-list' id='videosToPlaylist' formArrayName="videos" placeholder="Add videos To Playlist">
+        <li class="videos-list-container" *ngFor="let video of allVideosFromPlayList.videos;let i=index">
+          <label>
+            <input  formControlName="{{i}}" type="checkbox"/>
+            <span></span>
+          </label>
+          {{video.title}}
+        </li>
+      </ul>
+
+      <span  class='error' *ngIf="playlistForm.controls['videos'].invalid">Field is mandatory</span>
+    </div>
+    <button class="action-button submit-playlist-button" (click)="createPlaylist()" [disabled]="playlistForm.invalid">Submit</button>
+    <button class="action-button close-button" (click)="resetPlayListForm();showPlaylistForm=!playlistForm;">Close</button>
+
+  </form>
+
+</div>
