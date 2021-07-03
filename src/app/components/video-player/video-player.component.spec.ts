@@ -55,13 +55,13 @@ describe('VideoPlayerComponent', () => {
 
   describe('when component is initialized', () => {
     it('should call setSpecificVideoToPlay() and set playListVideos', () => {
-      expect(component.playListVideos[0]['videos'].length).toEqual(5);
+      expect(component.playListVideos[0]['videos'].length).toEqual(7);
     });
     it('should call setNextVideoToPlay() and update videoCount as 0 and update video details such as URL,artist and title', () => {
       expect(component.videosCount).toEqual(0);
-      expect(component.videoUrl).toEqual('http://techslides.com/demos/sample-videos/small.mp4');
-      expect(component.videoArtist).toEqual('Demo');
-      expect(component.videoTitle).toEqual('Demo');
+      expect(component.videoUrl).toEqual('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4');
+      expect(component.videoArtist).toEqual('Elephant');
+      expect(component.videoTitle).toEqual('Elephant Dream');
     });
   });
 
@@ -80,13 +80,13 @@ describe('VideoPlayerComponent', () => {
   describe('when video from playlist has selected', () => {
     it('should call playSelectedVideoFromPlaylist() with video Object and updates videoCount with index of that video in playlist as well as video details', () => {
       const video = {
-        'title': 'Bunny',
+        'title': 'Big Buck Bunny',
         'artist': 'Bunny',
-        'url': 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
+        'url': 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
       };
       component.playSelectedVideoFromPlaylist(video);
       expect(component.videosCount).toEqual(3);
-      expect(component.videoTitle).toEqual('Bunny');
+      expect(component.videoTitle).toEqual('Big Buck Bunny');
       expect(component.videoArtist).toEqual('Bunny');
       expect(component.videoUrl).toEqual(video.url);
     });

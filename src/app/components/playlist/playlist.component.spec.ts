@@ -43,7 +43,7 @@ describe('PlaylistComponent', () => {
 
     it('should render 5 videos from playlist" ', () => {
       const app = fixture.debugElement.nativeElement;
-      expect(app.querySelectorAll('.video-from-playlist').length).toEqual(5);
+      expect(app.querySelectorAll('.video-from-playlist').length).toEqual(7);
     });
   });
 
