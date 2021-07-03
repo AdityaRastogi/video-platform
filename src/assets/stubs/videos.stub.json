@@ -1,22 +1,32 @@
 [
   {
-  "title":"Demo",
-  "artist":"Demo",
-  "url":"http://techslides.com/demos/sample-videos/small.mp4"
-},
-
-  {
-    "title":"DolbyCanyon",
-    "artist":"Canyon",
-    "url":"http://mirrors.standaloneinstaller.com/video-sample/dolbycanyon.m4v"
+    "title": "Elephant Dream",
+    "artist": "Elephant",
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
   },
   {
-    "title":"White-lillies",
-    "artist":"Lillies",
-    "url":"https://d2v9y0dukr6mq2.cloudfront.net/video/preview/turRaNC/white-lilies-bouquet_hiuyrhsue__SB_PM.mp4"
+    "title": "For Bigger Escape",
+    "artist": "Escape",
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
   },
   {
-    "title":"Bunny",
-    "artist":"Bunny",
-    "url":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-  }]
+    "title": "Bigger Fun",
+    "artist": "Joyrides",
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+  },
+  {
+    "title": "Big Buck Bunny",
+    "artist": "Bunny",
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    "title": "Sintel",
+    "artist": "GTV",
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+  },
+  {
+    "title": "Tears of Steel",
+    "artist": "Steel",
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+  }
+]
